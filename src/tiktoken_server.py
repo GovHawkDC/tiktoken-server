@@ -27,7 +27,7 @@ def token_count():
     data = request.get_json()
     if not 'prompt' in data:
       return json.dumps({'tokens': []})
-    model = "text-davinci-003"
+    model = "gpt-4o"
 
     if  'model' in data:
       model = data['model']

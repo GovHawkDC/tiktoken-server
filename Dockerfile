@@ -4,7 +4,7 @@
 # Copy the /usr/tiktoken/tiktoken_server.py file to the container
 # The entry point for the container is python -m flask --app /usr/tiktoken/tiktoken_server.py run
 
-FROM python:3.10-alpine
+FROM python:3.12-alpine
 RUN pip install flask
 RUN pip install tiktoken
 COPY src/tiktoken_server.py /usr/tiktoken/tiktoken_server.py

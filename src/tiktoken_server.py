@@ -39,7 +39,7 @@ def token_count():
         enc = tiktoken.encoding_for_model(model)
     except :
         return json.dumps({'error': "Model not found"})
-    return json.dumps({'tokens': enc.encode(data['prompt'])})
+    return json.dumps({'tokens': len(enc.encode(data['prompt']))})
 
     if __name__ == "__main__":
         app.run(host='0.0.0.0')
